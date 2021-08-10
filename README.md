@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains a pipeline used to update the breakpoint location and sequence content (for insertions) for structural variants (SVs) called from Oxford Nanopore sequencing data.
+This repository contains a pipeline used to update the breakpoint location and sequence content (for insertions) of structural variants (SVs) called from Oxford Nanopore sequencing data.
 This pipeline has only been tested using output from the [Sniffles](https://github.com/fritzsedlazeck/Sniffles) SV caller run on Oxford Nanopore data.
 We may add support for other SV callers or sequencing platforms if there is interest to do so from the community.
 At the moment, only deletions (`SVTYPE=DEL`) and insertions (`SVTYPE=INS`) are supported by the pipeline.
@@ -12,11 +12,12 @@ This pipeline is mostly written `R`, but uses the `system` function to pass para
 The pipeline is not guaranteed to run on a non-Linux system or on a shell other than bash.
 
 The pipeline will not update the `REF` and `ALT` fields of realigned deletions to reflect the new coordinates; it only updates the `POS` and `INFO` fields to reflect the new position of the deletion.
-Realigned deletions will actually have their `REF` and `ALT` fields modified to "N" and "\<DEL\>", respectively, to avoid introducinf any errors in the output `.vcf` file.
+Realigned deletions will actually have their `REF` and `ALT` fields modified to "N" and "\<DEL\>", respectively, to avoid introducing any errors in the output `.vcf` file.
 We opted for this behaviour because there is a known issue with Sniffles not accurately representing `REF` and `ALT` alleles, such that further processing through a program that adjusts these sequences is highly recommended if downstream applications need exact variant sequence.
 Insertions, on the other hand, have their `ALT` field modified to fully represent the new insertion sequence observed in the assembly.
 
-More details on the implementation of the pipeline are detailed in the related publication (link to be added later).
+More details on the implementation of the pipeline can be found in the related paper (link to be added later).
+The code for reproducing the analyses of the paper is included in the repository [soybean_sv_paper](https://github.com/malemay/soybean_sv_paper).
 
 ## Installation
 
