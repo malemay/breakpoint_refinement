@@ -1,17 +1,18 @@
-# Breakpoint refinement pipeline for Oxford Nanopore-discovered structural variants
+# Breakpoint refinement pipeline for structural variants
 
 ## Overview
 
-This repository contains a pipeline used to update the breakpoint location and sequence content (for insertions) for structural variants (SVs) called from Oxford Nanopore data.
+This repository contains a pipeline used to update the breakpoint location and sequence content (for insertions) for structural variants (SVs) called from Oxford Nanopore sequencing data.
 This pipeline has only been tested using output from the [Sniffles](https://github.com/fritzsedlazeck/Sniffles) SV caller run on Oxford Nanopore data.
 We may add support for other SV callers or sequencing platforms if there is interest to do so from the community.
 At the moment, only deletions (`SVTYPE=DEL`) and insertions (`SVTYPE=INS`) are supported by the pipeline.
 Duplications, inversions, and other types of SVs are not supported and their records will simply be copied from the input file to the output file.
 
-This pipeline is mostly written R, but uses the `system` function to pass parameters to a bash script that calls the external software that does the bulk of the data processing.
+This pipeline is mostly written `R`, but uses the `system` function to pass parameters to a bash script that calls the external software that does the bulk of the data processing.
 The pipeline is not guaranteed to run on a non-Linux system or on a shell other than bash.
 
 The pipeline will not update the `REF` and `ALT` fields of realigned deletions to reflect the new coordinates; it only updates the `POS` and `INFO` fields to reflect the new position of the deletion.
+Realigned deletions will actually have their `REF` and `ALT` fields modified to "N" and "\<DEL\>", respectively, to avoid introducinf any errors in the output `.vcf` file.
 We opted for this behaviour because there is a known issue with Sniffles not accurately representing `REF` and `ALT` alleles, such that further processing through a program that adjusts these sequences is highly recommended if downstream applications need exact variant sequence.
 Insertions, on the other hand, have their `ALT` field modified to fully represent the new insertion sequence observed in the assembly.
 
