@@ -21,7 +21,7 @@ The code for reproducing the analyses of the paper is included in the repository
 
 ## Installation
 
-The scripts can be downloaded from the repository by running the following command:
+The scripts and test data can be downloaded from the repository by running the following command:
 
 	git clone https://github.com/malemay/breakpoint_refinement.git
 
@@ -43,42 +43,52 @@ It can be installed by running this command in `R`:
 
 	install.packages("parallel")
 
+A few Bioconductor packages also need ot be installed.
+These can be installed using the following commands in `R`:
+
+	install.packages("BiocManager")
+	BiocManager::install(c("IRanges", "GenomicRanges", "Rsamtools"))
+
 ## Arguments to `refine_breakpoints`
 
 `refine_breakpoints` is the only function that most users should really need to run the pipeline.
 It takes as input a `.vcf` file containing SV calls originating from a single sample as well as a `.bam` file containing the Oxford Nanopore reads for that sample.
 Its arguments are documented below.
 
-* `input_vcf`: name of the input VCF file (character vector of length 1) 
-* `output_vcf`: name of the output VCF file (character vector of length 1)
-* `ncores`: number of cores for the for parallel processing (default = 1)
-* `reference_window`: number of bases to span on either side of SV position to extract from reference genome for alignment (default = 500)
+* `input_vcf`: name of the input VCF file
+* `output_vcf`: name of the output VCF file
+* `nanopore_bam`: path to the `.bam` file containing the reads used for alignment and polishing (should match the sample from which the VCF file originates)
+* `refgenome`: path to the reference genome
+* `ncores`: number of cores for parallel processing (default = 1)
+* `reference_window`: number of bases to span on either side of SV position to extract sequence from reference genome for alignment (default = 500)
 * `reads_window`: number of bases to span on either side of SV position to extract reads from the `.bam` file for alignment (default = 200)
 * `min_overlap`: minimum relative overlap between original and proposed refined deletion for the SV to be updated in the output VCF (default = 0.5)
 * `min_identity`: minimum percent identity between aligned sequences flanking the SV for the SV to be updated in the output VCF (default = 85) 
 * `max_gaps`: maximum percent gaps between aligned sequences flanking the SV for the SV to be updated in the output VCF (default = 15)
-* `max_distance`: maximum relative (Levensthein) edit distance between the original insertion sequence and proposed refined sequence for the SV to be updated in the output VCF (default = 0.5)
+* `max_distance`: maximum relative (Levenshtein) edit distance between the original insertion sequence and proposed refined sequence for the SV to be updated in the output VCF (default = 0.5)
 * `max_offset`: maximum distance (in bases) between the original insertion position and proposed refined position for the SV to be updated in the output VCF (default = 50)
-* `max_svlen`: maximum length (in bases) of the SV for consideration by the pipeline; larger values considerable increase memory and computing time requirements (default = 5000)
-* `age_script`: path to the shell script that will be used to launch the external programs (default = "age_realign.sh")
+* `max_svlen`: maximum length (in bases) of the SV for consideration by the pipeline; larger values considerably increase memory and computing time requirements (default = 50000)
+* `age_script`: path to the shell script that will be used to launch the external programs (default = "./age_realign.sh")
 * `samtools`: path to the samtools executable (default = "samtools")
 * `minimap2`: path to the minimap2 executable (default = "minimap2")
 * `age`: path to the age_align executable (default = "age_align")
 * `wtdbg2`: path to the wtdbg2 executable (default = "wtdbg2")
 * `wtpoa_cns`: path to the wtpoa-cns executable (default = "wtpoa-cns")
-* `refgenome`: path to the reference genome
-* `nanopore_bam`: path to the `.bam` file containing the reads used for alignment and polishing (should match the sample from which the VCF file originates)
 
 
 ## Testing the installation
 
-Sourcing the file `breakpoint_refinement.R` in R gives access to the `refine_breakpoints` function and other functions it needs.
+Sourcing the file `breakpoint_refinement.R` in `R` gives access to the `refine_breakpoints` function and other functions it needs:
 
 	source("breakpoint_refinement.R")
 
-The following command can be run in R to test the installation on test data, provided that the programs listed above are in your `$PATH`:
+The following command can be run in `R` to test the installation on test data, provided that the programs listed above are in your `$PATH`:
 
-	refine_breakpoints("input_test.vcf", "output_test.vcf", "test.bam", "refgenome.fa", ncores = 4)
+	refine_breakpoints("input_test.vcf", "output_test.vcf", "test.bam", "refgenome.fa", ncores = 2)
+
+Adjust the `ncores` argument to the desired number of cores.
+
+The output of the pipeline will be written to output_test.vcf.
 
 ## Citation
 

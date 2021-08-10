@@ -1,0 +1,325 @@
+##fileformat=VCFv4.1
+##source=Sniffles
+##fileDate=20201118
+##contig=<ID=Gm01,length=57932355>
+##contig=<ID=Gm02,length=50400358>
+##contig=<ID=Gm03,length=46951866>
+##contig=<ID=Gm04,length=51203389>
+##contig=<ID=Gm05,length=42274530>
+##contig=<ID=Gm06,length=50945864>
+##contig=<ID=Gm07,length=44949256>
+##contig=<ID=Gm08,length=47227184>
+##contig=<ID=Gm09,length=50572668>
+##contig=<ID=Gm10,length=51638687>
+##contig=<ID=Gm11,length=39643745>
+##contig=<ID=Gm12,length=41531199>
+##contig=<ID=Gm13,length=45225048>
+##contig=<ID=Gm14,length=49893278>
+##contig=<ID=Gm15,length=53754295>
+##contig=<ID=Gm16,length=38112070>
+##contig=<ID=Gm17,length=41740656>
+##contig=<ID=Gm18,length=58286270>
+##contig=<ID=Gm19,length=51272880>
+##contig=<ID=Gm20,length=47846026>
+##contig=<ID=Gm13_scaffold_21,length=738250>
+##contig=<ID=scaffold_22,length=495248>
+##contig=<ID=scaffold_24,length=411096>
+##contig=<ID=scaffold_25,length=351051>
+##contig=<ID=scaffold_26,length=331792>
+##contig=<ID=Gm03_scaffold_27,length=329435>
+##contig=<ID=scaffold_28,length=308547>
+##contig=<ID=scaffold_29,length=308105>
+##contig=<ID=scaffold_30,length=305436>
+##contig=<ID=scaffold_31,length=280888>
+##contig=<ID=scaffold_32,length=278884>
+##contig=<ID=scaffold_33,length=277228>
+##contig=<ID=scaffold_34,length=266339>
+##contig=<ID=scaffold_35,length=255070>
+##contig=<ID=scaffold_36,length=243707>
+##contig=<ID=scaffold_37,length=239267>
+##contig=<ID=scaffold_39,length=226317>
+##contig=<ID=Gm13_scaffold_40,length=222034>
+##contig=<ID=scaffold_42,length=210317>
+##contig=<ID=scaffold_43,length=205294>
+##contig=<ID=scaffold_44,length=202322>
+##contig=<ID=scaffold_46,length=189765>
+##contig=<ID=scaffold_47,length=182404>
+##contig=<ID=scaffold_49,length=181564>
+##contig=<ID=scaffold_50,length=172653>
+##contig=<ID=scaffold_51,length=171282>
+##contig=<ID=scaffold_52,length=170651>
+##contig=<ID=Gm18_scaffold_54,length=162306>
+##contig=<ID=scaffold_55,length=158699>
+##contig=<ID=scaffold_56,length=152134>
+##contig=<ID=scaffold_57,length=150341>
+##contig=<ID=scaffold_58,length=147954>
+##contig=<ID=Gm06_scaffold_59,length=143106>
+##contig=<ID=scaffold_60,length=138344>
+##contig=<ID=scaffold_61,length=135760>
+##contig=<ID=scaffold_62,length=129681>
+##contig=<ID=scaffold_64,length=123871>
+##contig=<ID=scaffold_65,length=122984>
+##contig=<ID=Gm07_scaffold_69,length=114718>
+##contig=<ID=Gm06_scaffold_70,length=110978>
+##contig=<ID=scaffold_71,length=106066>
+##contig=<ID=scaffold_73,length=103230>
+##contig=<ID=scaffold_74,length=102792>
+##contig=<ID=scaffold_76,length=95140>
+##contig=<ID=scaffold_78,length=93085>
+##contig=<ID=Gm05_scaffold_79,length=91933>
+##contig=<ID=scaffold_80,length=90134>
+##contig=<ID=scaffold_82,length=88910>
+##contig=<ID=scaffold_83,length=87786>
+##contig=<ID=Gm14_scaffold_84,length=87745>
+##contig=<ID=scaffold_85,length=86836>
+##contig=<ID=scaffold_86,length=85210>
+##contig=<ID=scaffold_88,length=83696>
+##contig=<ID=scaffold_89,length=82788>
+##contig=<ID=scaffold_92,length=81888>
+##contig=<ID=scaffold_93,length=81213>
+##contig=<ID=Gm19_scaffold_94,length=80844>
+##contig=<ID=scaffold_95,length=79621>
+##contig=<ID=scaffold_96,length=76039>
+##contig=<ID=Gm06_scaffold_98,length=73503>
+##contig=<ID=scaffold_99,length=72293>
+##contig=<ID=scaffold_101,length=71959>
+##contig=<ID=scaffold_102,length=71773>
+##contig=<ID=scaffold_103,length=71355>
+##contig=<ID=scaffold_104,length=70944>
+##contig=<ID=scaffold_105,length=70397>
+##contig=<ID=scaffold_106,length=70080>
+##contig=<ID=Gm10_scaffold_107,length=69310>
+##contig=<ID=scaffold_108,length=68738>
+##contig=<ID=scaffold_109,length=68275>
+##contig=<ID=scaffold_110,length=68194>
+##contig=<ID=scaffold_111,length=67956>
+##contig=<ID=Gm15_scaffold_113,length=65966>
+##contig=<ID=Gm10_scaffold_115,length=65207>
+##contig=<ID=Gm11_scaffold_116,length=65021>
+##contig=<ID=scaffold_117,length=64814>
+##contig=<ID=scaffold_118,length=64207>
+##contig=<ID=Gm10_scaffold_119,length=63690>
+##contig=<ID=scaffold_120,length=62408>
+##contig=<ID=scaffold_121,length=61081>
+##contig=<ID=Gm02_scaffold_122,length=60768>
+##contig=<ID=scaffold_123,length=60683>
+##contig=<ID=scaffold_124,length=60335>
+##contig=<ID=scaffold_125,length=59862>
+##contig=<ID=scaffold_126,length=59466>
+##contig=<ID=scaffold_127,length=59299>
+##contig=<ID=scaffold_128,length=58771>
+##contig=<ID=scaffold_129,length=58219>
+##contig=<ID=scaffold_130,length=57849>
+##contig=<ID=scaffold_131,length=56711>
+##contig=<ID=scaffold_132,length=56345>
+##contig=<ID=scaffold_134,length=55222>
+##contig=<ID=Gm03_scaffold_135,length=54556>
+##contig=<ID=scaffold_137,length=53712>
+##contig=<ID=scaffold_138,length=52987>
+##contig=<ID=scaffold_140,length=52805>
+##contig=<ID=scaffold_141,length=52403>
+##contig=<ID=Gm20_scaffold_142,length=52006>
+##contig=<ID=scaffold_143,length=51914>
+##contig=<ID=scaffold_145,length=50637>
+##contig=<ID=scaffold_146,length=50633>
+##contig=<ID=scaffold_147,length=50627>
+##contig=<ID=scaffold_149,length=49343>
+##contig=<ID=scaffold_151,length=49120>
+##contig=<ID=scaffold_152,length=49100>
+##contig=<ID=scaffold_155,length=48061>
+##contig=<ID=scaffold_157,length=47921>
+##contig=<ID=scaffold_158,length=47539>
+##contig=<ID=scaffold_160,length=47192>
+##contig=<ID=scaffold_162,length=46533>
+##contig=<ID=scaffold_163,length=46420>
+##contig=<ID=scaffold_164,length=46300>
+##contig=<ID=Gm09_scaffold_165,length=46073>
+##contig=<ID=Gm01_scaffold_166,length=45523>
+##contig=<ID=scaffold_168,length=45335>
+##contig=<ID=scaffold_174,length=43988>
+##contig=<ID=scaffold_175,length=43700>
+##contig=<ID=scaffold_178,length=42465>
+##contig=<ID=scaffold_180,length=41976>
+##contig=<ID=Gm06_scaffold_183,length=41064>
+##contig=<ID=scaffold_184,length=41054>
+##contig=<ID=scaffold_187,length=40619>
+##contig=<ID=Gm05_scaffold_188,length=40495>
+##contig=<ID=scaffold_189,length=40325>
+##contig=<ID=scaffold_191,length=40172>
+##contig=<ID=scaffold_193,length=40013>
+##contig=<ID=scaffold_194,length=39630>
+##contig=<ID=scaffold_195,length=39623>
+##contig=<ID=scaffold_196,length=39089>
+##contig=<ID=scaffold_198,length=38385>
+##contig=<ID=scaffold_199,length=38268>
+##contig=<ID=scaffold_201,length=37078>
+##contig=<ID=scaffold_207,length=35312>
+##contig=<ID=scaffold_209,length=32408>
+##contig=<ID=scaffold_210,length=32299>
+##contig=<ID=scaffold_211,length=32281>
+##contig=<ID=Gm06_scaffold_214,length=31455>
+##contig=<ID=scaffold_216,length=30947>
+##contig=<ID=scaffold_217,length=30589>
+##contig=<ID=scaffold_223,length=29001>
+##contig=<ID=scaffold_224,length=28815>
+##contig=<ID=scaffold_226,length=26649>
+##contig=<ID=scaffold_229,length=26294>
+##contig=<ID=Gm11_scaffold_232,length=25751>
+##contig=<ID=scaffold_233,length=25699>
+##contig=<ID=scaffold_234,length=25619>
+##contig=<ID=Gm03_scaffold_238,length=24147>
+##contig=<ID=scaffold_239,length=24081>
+##contig=<ID=scaffold_240,length=23984>
+##contig=<ID=scaffold_241,length=23760>
+##contig=<ID=Gm03_scaffold_245,length=23189>
+##contig=<ID=scaffold_246,length=22858>
+##contig=<ID=Gm19_scaffold_249,length=22234>
+##contig=<ID=scaffold_250,length=22047>
+##contig=<ID=scaffold_252,length=21974>
+##contig=<ID=scaffold_253,length=21949>
+##contig=<ID=Gm16_scaffold_260,length=20567>
+##contig=<ID=scaffold_261,length=20430>
+##contig=<ID=scaffold_264,length=20110>
+##contig=<ID=scaffold_269,length=19385>
+##contig=<ID=scaffold_270,length=19361>
+##contig=<ID=scaffold_271,length=19314>
+##contig=<ID=scaffold_273,length=18786>
+##contig=<ID=scaffold_277,length=18424>
+##contig=<ID=scaffold_282,length=18164>
+##contig=<ID=scaffold_288,length=17833>
+##contig=<ID=scaffold_294,length=17428>
+##contig=<ID=scaffold_298,length=17176>
+##contig=<ID=Gm06_scaffold_301,length=17071>
+##contig=<ID=scaffold_303,length=17042>
+##contig=<ID=scaffold_307,length=16860>
+##contig=<ID=scaffold_313,length=16732>
+##contig=<ID=Gm12_scaffold_314,length=16655>
+##contig=<ID=scaffold_315,length=16632>
+##contig=<ID=scaffold_319,length=16543>
+##contig=<ID=scaffold_324,length=16386>
+##contig=<ID=scaffold_327,length=16308>
+##contig=<ID=scaffold_328,length=16266>
+##contig=<ID=scaffold_330,length=16226>
+##contig=<ID=scaffold_331,length=16197>
+##contig=<ID=scaffold_332,length=16121>
+##contig=<ID=scaffold_336,length=15801>
+##contig=<ID=scaffold_337,length=15713>
+##contig=<ID=Gm15_scaffold_339,length=15657>
+##contig=<ID=scaffold_340,length=15648>
+##contig=<ID=scaffold_344,length=15556>
+##contig=<ID=scaffold_352,length=15316>
+##contig=<ID=Gm14_scaffold_354,length=15214>
+##contig=<ID=scaffold_355,length=15178>
+##contig=<ID=scaffold_367,length=14800>
+##contig=<ID=scaffold_368,length=14758>
+##contig=<ID=scaffold_371,length=14555>
+##contig=<ID=scaffold_375,length=14410>
+##contig=<ID=scaffold_377,length=14361>
+##contig=<ID=scaffold_383,length=14174>
+##contig=<ID=scaffold_387,length=14066>
+##contig=<ID=scaffold_393,length=13876>
+##contig=<ID=scaffold_398,length=13785>
+##contig=<ID=scaffold_401,length=13700>
+##contig=<ID=scaffold_405,length=13592>
+##contig=<ID=scaffold_408,length=13571>
+##contig=<ID=scaffold_411,length=13445>
+##contig=<ID=scaffold_415,length=13297>
+##contig=<ID=scaffold_422,length=13132>
+##contig=<ID=scaffold_423,length=13129>
+##contig=<ID=scaffold_426,length=12957>
+##contig=<ID=scaffold_431,length=12850>
+##contig=<ID=scaffold_436,length=12758>
+##contig=<ID=scaffold_438,length=12654>
+##contig=<ID=scaffold_439,length=12650>
+##contig=<ID=scaffold_442,length=12621>
+##contig=<ID=scaffold_449,length=12515>
+##contig=<ID=scaffold_452,length=12441>
+##contig=<ID=scaffold_456,length=12349>
+##contig=<ID=scaffold_459,length=12255>
+##contig=<ID=scaffold_461,length=12204>
+##contig=<ID=scaffold_467,length=11859>
+##contig=<ID=scaffold_475,length=11712>
+##contig=<ID=scaffold_478,length=11680>
+##contig=<ID=scaffold_483,length=11566>
+##contig=<ID=scaffold_484,length=11532>
+##contig=<ID=scaffold_486,length=11510>
+##contig=<ID=scaffold_489,length=11433>
+##contig=<ID=scaffold_492,length=11421>
+##contig=<ID=scaffold_496,length=11345>
+##contig=<ID=scaffold_498,length=11322>
+##contig=<ID=scaffold_499,length=11305>
+##contig=<ID=scaffold_501,length=11260>
+##contig=<ID=scaffold_502,length=11245>
+##contig=<ID=scaffold_506,length=11177>
+##contig=<ID=scaffold_508,length=11147>
+##contig=<ID=scaffold_511,length=11124>
+##contig=<ID=scaffold_518,length=10980>
+##contig=<ID=scaffold_519,length=10959>
+##contig=<ID=Gm03_scaffold_521,length=10953>
+##contig=<ID=scaffold_522,length=10938>
+##contig=<ID=scaffold_524,length=10934>
+##contig=<ID=scaffold_529,length=10856>
+##contig=<ID=scaffold_535,length=10724>
+##contig=<ID=scaffold_540,length=10689>
+##contig=<ID=scaffold_542,length=10655>
+##contig=<ID=scaffold_544,length=10628>
+##contig=<ID=scaffold_551,length=10505>
+##contig=<ID=scaffold_556,length=10363>
+##contig=<ID=scaffold_560,length=10351>
+##contig=<ID=Gm18_scaffold_561,length=10338>
+##contig=<ID=scaffold_568,length=10234>
+##contig=<ID=scaffold_570,length=10131>
+##contig=<ID=scaffold_576,length=10072>
+##contig=<ID=scaffold_578,length=10057>
+##contig=<ID=scaffold_579,length=10039>
+##contig=<ID=Gm16_scaffold_661,length=8430>
+##contig=<ID=Gm14_scaffold_738,length=7259>
+##contig=<ID=Gm19_scaffold_765,length=6817>
+##contig=<ID=Gm03_scaffold_926,length=5313>
+##contig=<ID=Gm08_scaffold_952,length=5173>
+##contig=<ID=Gm10_scaffold_1052,length=4590>
+##contig=<ID=Gm16_scaffold_1357,length=2431>
+##contig=<ID=Gm10_scaffold_1369,length=1922>
+##contig=<ID=Gm19_scaffold_1377,length=1571>
+##contig=<ID=Gm13_scaffold_1386,length=1350>
+##contig=<ID=Gm06_scaffold_1454,length=885>
+##contig=<ID=mitochondrion,length=402558>
+##contig=<ID=chloroplast,length=152218>
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=DUP,Description="Duplication">
+##ALT=<ID=INV,Description="Inversion">
+##ALT=<ID=INVDUP,Description="InvertedDUP with unknown boundaries">
+##ALT=<ID=TRA,Description="Translocation">
+##ALT=<ID=INS,Description="Insertion">
+##FILTER=<ID=UNRESOLVED,Description="An insertion that is longer than the read and thus we cannot predict the full size.">
+##INFO=<ID=CHR2,Number=1,Type=String,Description="Chromosome for END coordinate in case of a translocation">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the structural variant">
+##INFO=<ID=MAPQ,Number=1,Type=Integer,Description="Median mapping quality of paired-ends">
+##INFO=<ID=RE,Number=1,Type=Integer,Description="read support">
+##INFO=<ID=IMPRECISE,Number=0,Type=Flag,Description="Imprecise structural variation">
+##INFO=<ID=PRECISE,Number=0,Type=Flag,Description="Precise structural variation">
+##INFO=<ID=SVLEN,Number=1,Type=Integer,Description="Length of the SV">
+##INFO=<ID=REF_strand,Number=2,Type=Integer,Description="Length of the SV">
+##INFO=<ID=SVMETHOD,Number=1,Type=String,Description="Type of approach used to detect SV">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=SEQ,Number=1,Type=String,Description="Extracted sequence from the best representative read.">
+##INFO=<ID=STD_quant_start,Number=A,Type=Float,Description="STD of the start breakpoints across the reads.">
+##INFO=<ID=STD_quant_stop,Number=A,Type=Float,Description="STD of the stop breakpoints across the reads.">
+##INFO=<ID=Kurtosis_quant_start,Number=A,Type=Float,Description="Kurtosis value of the start breakpoints across the reads.">
+##INFO=<ID=Kurtosis_quant_stop,Number=A,Type=Float,Description="Kurtosis value of the stop breakpoints across the reads.">
+##INFO=<ID=SUPTYPE,Number=A,Type=String,Description="Type by which the variant is supported.(SR,ALN,NR)">
+##INFO=<ID=STRANDS,Number=A,Type=String,Description="Strand orientation of the adjacency in BEDPE format (DEL:+-, DUP:-+, INV:++/--)">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency.">
+##INFO=<ID=ZMW,Number=A,Type=Integer,Description="Number of ZMWs (Pacbio) supporting SV.">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=DR,Number=1,Type=Integer,Description="# high-quality reference reads">
+##FORMAT=<ID=DV,Number=1,Type=Integer,Description="# high-quality variant reads">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	OAC_DRAYTON/guppy_4.0.11/ngmlr_alignment/OAC_DRAYTON_porechopped_aligned.sort.bam
+Gm01	9703	1	N	<DUP>	.	PASS	PRECISE;SVMETHOD=Snifflesv1.0.11;CHR2=Gm01;END=10582;STD_quant_start=0.447214;STD_quant_stop=9.695360;Kurtosis_quant_start=2.000000;Kurtosis_quant_stop=1.416523;SVTYPE=DUP;SUPTYPE=SR;SVLEN=879;STRANDS=-+;RE=5;REF_strand=2;AF=0.714286	GT:DR:DV	1/1:2:5
+Gm01	63004	5	N	<DUP>	.	PASS	IMPRECISE;SVMETHOD=Snifflesv1.0.11;CHR2=Gm01;END=65124;STD_quant_start=139.789127;STD_quant_stop=139.992143;Kurtosis_quant_start=1.963176;Kurtosis_quant_stop=1.997959;SVTYPE=DUP;SUPTYPE=SR;SVLEN=2120;STRANDS=-+;RE=5;REF_strand=1;AF=0.833333	GT:DR:DV	1/1:1:5
+Gm01	69804	6	N	<DEL>	.	PASS	IMPRECISE;SVMETHOD=Snifflesv1.0.11;CHR2=Gm01;END=76160;STD_quant_start=223.754578;STD_quant_stop=218.551291;Kurtosis_quant_start=-0.290762;Kurtosis_quant_stop=-0.343067;SVTYPE=DEL;SUPTYPE=SR;SVLEN=-6356;STRANDS=+-;RE=9;REF_strand=0;AF=1	GT:DR:DV	1/1:0:9
+Gm01	71828	7	N	<DEL>	.	PASS	IMPRECISE;SVMETHOD=Snifflesv1.0.11;CHR2=Gm01;END=78179;STD_quant_start=509.800615;STD_quant_stop=512.692240;Kurtosis_quant_start=-0.000008;Kurtosis_quant_stop=-0.000122;SVTYPE=DEL;SUPTYPE=SR;SVLEN=-6351;STRANDS=+-;RE=3;REF_strand=1;AF=0.75	GT:DR:DV	1/1:1:3
+Gm01	501414	9	ATTTTTTCTATAGTTTGAACGTCAAAGAATCCAAAAAAAATTATTTCGTGCACCAGTTCCATCGACTAGCACCTCAAAATACAAGTACAAAATCAAAAAAACTATGATTTGGACCCTTACAACTATGCTTAAGAGCCCATGTTCTGCATTTCTTTAAAATTATGTTCAACACATTAATGATGTGTGTGCCTCATTTTTTCTATAGTTTGAACGTCAGAGAATCCAAAAAAAATTATTTCGTGCACCAGTTCCATCGACTAGCACCTCAAAATACAAGTACAAAATCAAAAAAACTATGATTTGGACCCTTGCAACTATGTTTAAGAGCCCATGTTCTGCATTTTTTTAAAATTATGTCCAACACATTAATGAT	N	.	PASS	IMPRECISE;SVMETHOD=Snifflesv1.0.11;CHR2=Gm01;END=501793;STD_quant_start=104.856251;STD_quant_stop=100.960388;Kurtosis_quant_start=-1.732656;Kurtosis_quant_stop=-1.747588;SVTYPE=DEL;SUPTYPE=AL;SVLEN=-379;STRANDS=+-;RE=6;REF_strand=1;AF=0.857143	GT:DR:DV	1/1:1:6
+Gm01	655262	10	AAAATTCCGTGCTTGTTACTTTCTTGGGTGCGAGGTTCTGGTTCAGTTTCCACCAATCATCAGAGATGTTTAGGAAATATACGCAAGCATTGTGCAAAAGTGATGATAGGGACATTTCATGACAAGGTTCATAAAGAAACGTAATATTTACAAACACAATAAAAACGATCTAATTCGGATCAGGGATTTACGTGTTGGCTTCTTATTACAGAACTATGGCAGCCTCTGTACCATGCATGAAAAAAATATATTTTGCAACTTGTTATTCGAATTGCGAAGTGAATTTGACAGATGAGAGAAGCGGGGAAAAACAAAATCCTAAATCTCTTCTTGAGTTATTGAGATTTATGAATCATCACACATATATACATATTTATTCTTACGGAGATATAATTTACCATGAATCGAAATATACAACTAAATTGATATTCATGATAGTAGACCGAATAAAACTAGCGAGGCTTGTTTGATGACTCTTGAGACTCTCCAAACTTCGTGCTGTACACGATGCCACGATTCTGCAGTATGTAGATTTTTGGCCATTTTAACAGCATCATCGATTCCAGGGAAAGATTGAGAGCCGTAGTCATTATGTTTTGATGGTCCATAAATCTGAAAAATGCAGGGAAATGGAATTAAAGGGAAAAAGACTTCATTATTAAATGTTTGGATAACTTTAACAAAATGTTCTAATAGATAATTACATCAACACAAAATGACATAAGCTGGGGGGGAGGGGGGGTGTAGTTGTAATCTTTCAATCATGAACTAGAGACTAATCCCTCATGATAAAGATACATTTAAGAAATTGACTTTTCTTTGGAGGGTAAAAGTAAGAGATCTTTCAGATCATGAACTACAAACTAATGGCTTATGATAAAAATCCATTTATGAAATTGATTTCTCTTAACATATTTCCGGGGGAGGGGTGCAGTTTGTAACTAAGAAATCTTTTGGTCGTGAACTACAGACTAATCCCTCATGATAAAGATACATTTAAGAAATTGACTTCTCCCAATATATTGCCAAATTTTCCTCCAACATAAGCTCTCTTCAATACACAGGTGTCTTGAGATTAGACTCCTAACACATTAAGGACATGATTATTTGTCAATCATACTACACCTTATTGGTCATCCATCTTTTTCTTTTGTTTTGATTGATATTGCTTTGGCTTATTATCAAAACATTTTTAATTTATCCCTGGTAATTAGAGTTGCCTCCGCTTGTAATCTTTACATATCATTGGTTATTGGTTAACACCTCCCCTGAAAACAACTTACCAAATGCTTATACCATGACATTCAAAGAGGCCATCTCTGTCAGTGAATGCACGCTCAGCCATCATCAATCTATCATTCAGCTCTCTCACTCTCAAGTGGTCCTTCTTCCCTGTTATCCAACCTTTACCAGCTTCTATTTCCTGAACAATCACGTTTGAATGTTTAGCACAAGAACCATTATGCTATTTTGGTTATTTAAAGAATACTCAAGACATACCTTTCTCTGGCTATCTATCTTGATTGCTGCTTTCTCAAGCCCCTTGATGGACTTGAATATAGGTGACAAATTTATGTCTTTATTTGAAATCTCATCCTCCAGATTCTCCACGCTAAGCTGTGATTTAAATATTTGGTGTTGTAAAGTATCTTTCATTCTCTCAAATTCAGTGAGCACAGTCTTTGAAAAAAATTACATTAAATCACCATCTAATGAATTGTAGGCACACCTGGAGCTCCTTGGCATAAGATAGATAATCAAAAGGTAGGAATTCCTCATCTGCTAACCAAAGTGCTACCAGACCCCATTTTGTTGTGTGGTTATGTGTGACCAGATTTCTATACTTTTGACCCAACAAAAAACAGAATTTTGTATTTAAATCATTTCCCCTTTAAATGTATAATGTATTAGAACATGTTTTTGTATCCGTTTCAAACAGATGTTGATAGAAAAGGATGTTTGAAATAGCGTCTACTCCTTAATTTTGCGTTGGAATCATTGGATTTGTCTGGGAATTTATGCAATAACAAGTTGGACAGAAATCCAAATATGTGCTTAATGATAGGGATAGGAAGTAGGAATAAAAAATGAATTAGTGTTCAGAC	N	.	PASS	IMPRECISE;SVMETHOD=Snifflesv1.0.11;CHR2=Gm01;END=657367;STD_quant_start=345.690613;STD_quant_stop=347.073767;Kurtosis_quant_start=0.064317;Kurtosis_quant_stop=0.097866;SVTYPE=DEL;SUPTYPE=AL;SVLEN=-2105;STRANDS=+-;RE=5;REF_strand=2;AF=0.714286	GT:DR:DV	1/1:2:5
+Gm01	714786	12	ATGATCCAAACTCAACTGCTGTTTTAAAGGGTAATTGTTTTCTCACATCCGAAAGG	N	.	PASS	IMPRECISE;SVMETHOD=Snifflesv1.0.11;CHR2=Gm01;END=714842;STD_quant_start=30.023800;STD_quant_stop=28.165328;Kurtosis_quant_start=-0.145191;Kurtosis_quant_stop=-0.098798;SVTYPE=DEL;SUPTYPE=AL;SVLEN=-56;STRANDS=+-;RE=7;REF_strand=0;AF=1	GT:DR:DV	1/1:0:7
+Gm01	806475	13	N	TAAAGATCTTAACTATGAGCCTGACTATATTAAGGGGACACAAGTCAGTGTTTTAGATCTTAAGTACAGTGTGCGACAATTAACTAATGAATCAAAAGAATTGATTATATTTTTAATTAAAATATTTTCTTTCTTTAAATAAAAAAGATATTTTCAAGCACCCTCGATTGAACAAAAAGAGAAGAAAGATTATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATATAAAGTAAAGAACATTGATTATTAATAAATACTTATGATTTTTTCAGATCGTAATTTTTATTTTTATCTTACATTTTTTTATCTTTCCTGTTCTTTCTCATAATCTTATCTATATATTTATTATGTACCCTTTGGAGAAGATAACCTTGCTTCTCAGAATAATTATTCCCATCTCAAAAAAATTGTTTCTTGTAAAGCATTCATGTTTTTTAATGAAAAAACAAATCTATTATATTTGTAGTTTTTTTATTTCTATCTTCTCACTTATATACATACATGTAAAGAATTATCTAAATAATCATGATTCATTAGCCAACAAATTAATATGACATTTGATAGACCCGAGAGAAAATGGATCCACAAAAATTTAAAACACTTCGGGAAGGACATTACAATAACTTGAAGTATGTTCATTTTTACAGAAATAAAAAAGCTAGCAAATGGCAATAGACCGACAATATATAGCGAACGTGACCTCAGTGAAGTATAATTAAACAATATAATAAATAGAAAGAAAAAGGGAGGCAGTGGTATG	.	PASS	PRECISE;SVMETHOD=Snifflesv1.0.11;CHR2=Gm01;END=806476;STD_quant_start=0.707107;STD_quant_stop=3.708099;Kurtosis_quant_start=-1.000000;Kurtosis_quant_stop=0.198678;SVTYPE=INS;SUPTYPE=AL,SR;SVLEN=809;STRANDS=+-;RE=4;REF_strand=0;AF=1	GT:DR:DV	1/1:0:4
