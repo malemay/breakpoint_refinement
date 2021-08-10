@@ -1,5 +1,3 @@
-# File initially created on October 2, 2020
-
 # This function takes the name of a vcf file as input and processes 
 # the input line by line to write the output back to another vcf
 # file.
@@ -10,13 +8,13 @@
 
 # - update_breakpoints()
 
-refine_breakpoints <- function(input_vcf, output_vcf, ncores = 1,
-			       reference_window, reads_window,
-			       min_overlap, min_identity, max_gaps,
-			       max_distance, max_offset, max_svlen,
-			       age_script, samtools, minimap2,
-			       age, wtdbg2, wtpoa_cns, refgenome,
-			       nanopore_bam) {
+refine_breakpoints <- function(input_vcf, output_vcf, nanopore_bam, refgenome,
+			       ncores = 1, reference_window = 500, reads_window = 200,
+			       min_overlap = 0.5, min_identity = 85, max_gaps = 15,
+			       max_distance = 0.5, max_offset = 50, max_svlen = 50000,
+			       age_script = "age_realign.sh", samtools = "samtools", 
+			       minimap2 = "minimap2", age = "age_align", wtdbg2 = "wtdbg2",
+			       wtpoa_cns = "wtpoa-cns") {
 
 	# Reading the input vcf_file using the scan function
 	vcf_lines <- scan(input_vcf, what = character(), sep = "\n", quiet = TRUE)

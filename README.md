@@ -1,8 +1,8 @@
 # Breakpoint refinement pipeline for Oxford Nanopore-discovered structural variants
 
 This repository contains a pipeline used to update the breakpoint location and sequence content (for insertions) for structural variants (SVs) called from Oxford Nanopore data.
-This pipeline has only been tested using output from the [Sniffles](https://github.com/fritzsedlazeck/Sniffles) SV caller.
-We may add support for other SV callers if there is interest to do so from the community.
+This pipeline has only been tested using output from the [Sniffles](https://github.com/fritzsedlazeck/Sniffles) SV caller run on Oxford Nanopore data.
+We may add support for other SV callers or sequencing platforms if there is interest to do so from the community.
 
 This pipeline is mostly written R, but uses the `system` function to pass parameters to a bash script that calls the external software that does the bulk of the data processing.
 The pipeline is not guaranteed to run on a non-Linux system or on a shell other than bash.
@@ -33,19 +33,29 @@ It can be installed by running this command in `R`:
 
 # Arguments to `refine_breakpoints`
 
-`refine_breakpoints` is the only function that most user should really need to use to run the pipeline.
+`refine_breakpoints` is the only function that most users should really need to run the pipeline.
+It takes as input a `.vcf` file containing SV calls originating from a single sample as well as a `.bam` file containing the Oxford Nanopore reads for that sample.
 Its arguments are documented below.
 
-input_vcf
-output_vcf
-ncores = 1
-reference_window
-reads_window,
-min_overlap, min_identity, max_gaps,
-max_distance, max_offset, max_svlen,
-age_script, samtools, minimap2,
-age, wtdbg2, wtpoa_cns, refgenome,
-nanopore_bam) {
+* `input_vcf`: name of the input VCF file (character vector of length 1) 
+* `output_vcf`: name of the output VCF file (character vector of length 1)
+* `ncores`: number of cores for the for parallel processing (default = 1)
+* `reference_window`: number of bases to span on either side of SV position to extract from reference genome for alignment (default = 500)
+* `reads_window`: number of bases to span on either side of SV position to extract reads from the `.bam` file for alignment (default = 200)
+* `min_overlap`: minimum relative overlap between original and proposed refined deletion for the SV to be updated in the output VCF (default = 0.5)
+* `min_identity`: minimum percent identity between aligned sequences flanking the SV for the SV to be updated in the output VCF (default = 85) 
+* `max_gaps`: maximum percent gaps between aligned sequences flanking the SV for the SV to be updated in the output VCF (default = 15)
+* `max_distance`: maximum relative (Levensthein) edit distance between the original insertion sequence and proposed refined sequence for the SV to be updated in the output VCF (default = 0.5)
+* `max_offset`: maximum distance (in bases) between the original insertion position and proposed refined position for the SV to be updated in the output VCF (default = 50)
+* `max_svlen`: maximum length (in bases) of the SV for consideration by the pipeline; larger values considerable increase memory and computing time requirements (default = 5000)
+* `age_script`: path to the shell script that will be used to launch the external programs (default = "age_realign.sh")
+* `samtools`: path to the samtools executable (default = "samtools")
+* `minimap2`: path to the minimap2 executable (default = "minimap2")
+* `age`: path to the age_align executable (default = "age_align")
+* `wtdbg2`: path to the wtdbg2 executable (default = "wtdbg2")
+* `wtpoa_cns`: path to the wtpoa-cns executable (default = "wtpoa-cns")
+* `refgenome`: path to the reference genome
+* `nanopore_bam`: path to the `.bam` file containing the reads used for alignment and polishing (should match the sample from which the VCF file originates)
 
 
 # Testing the installation
