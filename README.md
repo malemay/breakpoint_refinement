@@ -13,7 +13,13 @@ The scripts can be downloaded from the repository by running the following comma
 
 	git clone https://github.com/malemay/breakpoint_refinement.git
 
+The pipeline has not been formalized into a proper `R` package, but might be in the future if there is community interest.
+
 # Software dependencies
+
+* [`R` programming language](https://cran.r-project.org/) (we recommend version 4 minimally)
+* [AGE](https://github.com/abyzovlab/AGE)
+* [samtools](https://github.com/samtools/samtools)
 
 # Arguments to `refine_breakpoints`
 
