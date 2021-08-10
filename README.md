@@ -43,7 +43,7 @@ It can be installed by running this command in `R`:
 
 	install.packages("parallel")
 
-A few Bioconductor packages also need ot be installed.
+A few [Bioconductor](https://www.bioconductor.org/) packages also need to be installed.
 These can be installed using the following commands in `R`:
 
 	install.packages("BiocManager")
