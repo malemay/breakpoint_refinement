@@ -17,11 +17,36 @@ The pipeline has not been formalized into a proper `R` package, but might be in 
 
 # Software dependencies
 
-* [`R` programming language](https://cran.r-project.org/) (we recommend version 4 minimally)
-* [AGE](https://github.com/abyzovlab/AGE)
-* [samtools](https://github.com/samtools/samtools)
+The following programs should be installed for the pipeline to run.
+The versions we used for development are indicated in parentheses.
+
+* [AGE](https://github.com/abyzovlab/AGE) (commit 6fa60999f573998a95b6ef751b454e6719b1849d)
+* [minimap2](https://github.com/lh3/minimap2) (commit c9874e2dc50e32bbff4ded01cf5ec0e9be0a53dd)
+* [`R` programming language](https://cran.r-project.org/) (version 4.0.3)
+* [samtools](https://github.com/samtools/samtools) (commit 26d7c73c690d298c3d4f6979224933d2e2d102cf)
+* [wtdbg2](https://github.com/ruanjue/wtdbg2) (commit 79334f4d92084f5f5ff81b48f6b993ae14b1d88d)
+
+The `parallel` package also needs to be installed for the pipeline to be able to run in parallel on multiple cores.
+It can be installed by running this command in `R`:
+
+	install.packages("parallel")
 
 # Arguments to `refine_breakpoints`
+
+`refine_breakpoints` is the only function that most user should really need to use to run the pipeline.
+Its arguments are documented below.
+
+input_vcf
+output_vcf
+ncores = 1
+reference_window
+reads_window,
+min_overlap, min_identity, max_gaps,
+max_distance, max_offset, max_svlen,
+age_script, samtools, minimap2,
+age, wtdbg2, wtpoa_cns, refgenome,
+nanopore_bam) {
+
 
 # Testing the installation
 
