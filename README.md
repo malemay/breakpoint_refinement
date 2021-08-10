@@ -1,13 +1,23 @@
 # Breakpoint refinement pipeline for Oxford Nanopore-discovered structural variants
 
+## Overview
+
 This repository contains a pipeline used to update the breakpoint location and sequence content (for insertions) for structural variants (SVs) called from Oxford Nanopore data.
 This pipeline has only been tested using output from the [Sniffles](https://github.com/fritzsedlazeck/Sniffles) SV caller run on Oxford Nanopore data.
 We may add support for other SV callers or sequencing platforms if there is interest to do so from the community.
+At the moment, only deletions (`SVTYPE=DEL`) and insertions (`SVTYPE=INS`) are supported by the pipeline.
+Duplications, inversions, and other types of SVs are not supported and their records will simply be copied from the input file to the output file.
 
 This pipeline is mostly written R, but uses the `system` function to pass parameters to a bash script that calls the external software that does the bulk of the data processing.
 The pipeline is not guaranteed to run on a non-Linux system or on a shell other than bash.
 
-# Installation
+The pipeline will not update the `REF` and `ALT` fields of realigned deletions to reflect the new coordinates; it only updates the `POS` and `INFO` fields to reflect the new position of the deletion.
+We opted for this behaviour because there is a known issue with Sniffles not accurately representing `REF` and `ALT` alleles, such that further processing through a program that adjusts these sequences is highly recommended if downstream applications need exact variant sequence.
+Insertions, on the other hand, have their `ALT` field modified to fully represent the new insertion sequence observed in the assembly.
+
+More details on the implementation of the pipeline are detailed in the related publication (link to be added later).
+
+## Installation
 
 The scripts can be downloaded from the repository by running the following command:
 
@@ -15,7 +25,7 @@ The scripts can be downloaded from the repository by running the following comma
 
 The pipeline has not been formalized into a proper `R` package, but might be in the future if there is community interest.
 
-# Software dependencies
+## Software dependencies
 
 The following programs should be installed for the pipeline to run.
 The versions we used for development are indicated in parentheses.
@@ -31,7 +41,7 @@ It can be installed by running this command in `R`:
 
 	install.packages("parallel")
 
-# Arguments to `refine_breakpoints`
+## Arguments to `refine_breakpoints`
 
 `refine_breakpoints` is the only function that most users should really need to run the pipeline.
 It takes as input a `.vcf` file containing SV calls originating from a single sample as well as a `.bam` file containing the Oxford Nanopore reads for that sample.
@@ -58,7 +68,7 @@ Its arguments are documented below.
 * `nanopore_bam`: path to the `.bam` file containing the reads used for alignment and polishing (should match the sample from which the VCF file originates)
 
 
-# Testing the installation
+## Testing the installation
 
 Sourcing the file `breakpoint_refinement.R` in R gives access to the `refine_breakpoints` function and other functions it needs.
 
@@ -68,4 +78,7 @@ The following command can be run in R to test the installation on test data, pro
 
 	refine_breakpoints("input_test.vcf", "output_test.vcf", "test.bam", "refgenome.fa", ncores = 4)
 
+## Citation
+
+If you use this pipeline, please cite:
 

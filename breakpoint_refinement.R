@@ -580,6 +580,8 @@ update_breakpoints <- function(vcf_line, reference_window, reads_window,
 	# We first update the start position, SVLEN, and ALT allele (if an insertion)
 	sline[2] <- align_data[irow, "age_start"]
 	if(ins) sline[5] <- align_data[irow, "age_alt"]
+	# REF and ALT allele for realigned deletions are changed to N and <DEL> by default
+	if(del) {sline[4] <- "N"; sline[5] <- "<DEL>"}
 
 	# The SVLEN modification will depend on whether it is a deletion or an insertion
 	if(del) {
