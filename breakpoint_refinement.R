@@ -1,48 +1,4 @@
 
-# This function adds the header meta-information lines relative to the INFO tags added
-# by the refine_breakpoints() function to a VCF.
-
-# Will make both the VCF more robust and informative, and enable parsing
-# with bioinformatic tools such as bcftools
-
-# The function reads a vcf file, finds the last ##INFO line, and adds the meta-
-# information after those lines
-
-add_metainfo <- function(input_vcf, output_vcf) {
-	# Reading the vcf lines
-	vcf_lines <- scan(input_vcf, what = character(), sep = "\n", quiet = TRUE)
-
-	# Finding the last ##INFO line
-	last_info <- max(grep("^##INFO", vcf_lines))
-
-	# Creating a character vector with the lines to add
-	info_lines <- c(
-	'##INFO=<ID=MAX_SVLEN,Number=0,Type=Flag,Description="Breakpoints not refined because SVLEN exceeds the threshold set">',
-	'##INFO=<ID=NO_ALIGNMENT,Number=0,Type=Flag,Description="Breakpoints not refined because no alignement was produced">',
-	'##INFO=<ID=GATHER_DATA_FAILED,Number=0,Type=Flag,Description="Breakpoints not refined because gathering alignment failed">',
-	'##INFO=<ID=BELOW_THRESHOLDS,Number=0,Type=Flag,Description="Breakpoints not refined because quality thresholds not met">',
-	'##INFO=<ID=REALIGNED,Number=0,Type=Flag,Description="Breakpoints refined by the refine_breakpoints() R function">',
-	'##INFO=<ID=ORIGINAL_START,Number=1,Type=Integer,Description="Start position of variant before breakpoints were refined">',
-	'##INFO=<ID=ORIGINAL_LEN,Number=1,Type=Integer,Description="Length of variant before breakpoints were refined">',
-	'##INFO=<ID=ORIGINAL_ALT,Number=1,Type=String,Description="ALT allele of the variant before breakpoints were refined">',
-	'##INFO=<ID=CONTIG_LEN,Number=1,Type=Integer,Description="Length of the contig used for breakpoint refinement">',
-	'##INFO=<ID=IDENTITY,Number=1,Type=Integer,Description="Percent identity of the alignment used to refine the breakpoints">',
-	'##INFO=<ID=GAPS,Number=1,Type=Integer,Description="Percentage of gaps in the alignment used to refine the breakpoints">',
-	'##INFO=<ID=OVERLAP,Number=1,Type=Float,Description="Reciprocal overlap between original and breakpoint-refined variant">',
-	'##INFO=<ID=DISTANCE_RATIO,Number=1,Type=Float,Description="Edit distance ratio between original and refined allele">',
-	'##INFO=<ID=OFFSET,Number=1,Type=Integer,Description="Absolute difference (bp) between original allele and refined allele">'
-	)
-
-	# Updating the vcf_lines with those metainfo lines
-	vcf_lines <- c(vcf_lines[1:last_info], info_lines, vcf_lines[(last_info + 1):length(vcf_lines)])
-
-	# Writing the lines to the output file
-	cat(vcf_lines, file = output_vcf, sep = "\n")
-
-	# Returning NULL because the usable output is to file
-	return(invisible(NULL))
-}
-
 ### ------------------------------------------------------------
 
 # This function accepts arguments from update_breakpoints() in order
@@ -387,7 +343,7 @@ refine_breakpoints <- function(input_vcf, output_vcf, nanopore_bam, refgenome,
 			       ncores = 1, reference_window = 500, reads_window = 200,
 			       min_overlap = 0.5, min_identity = 85, max_gaps = 15,
 			       max_distance = 0.5, max_offset = 50, max_svlen = 50000,
-			       age_script = "age_realign.sh", samtools = "samtools", 
+			       age_script = "./age_realign.sh", samtools = "samtools", 
 			       minimap2 = "minimap2", age = "age_align", wtdbg2 = "wtdbg2",
 			       wtpoa_cns = "wtpoa-cns") {
 
@@ -401,12 +357,29 @@ refine_breakpoints <- function(input_vcf, output_vcf, nanopore_bam, refgenome,
 	# A sanity check to make sure that the splitting worked properly
 	stopifnot(length(vcf_lines) == length(header_lines) + length(body_lines))
 
-	# Here we process the header lines to add the tags that our function will add
-	#
-	# -
-	# TODO
-	#
-	# -
+	# Finding the last ##INFO line
+	last_info <- max(grep("^##INFO", header_lines))
+
+	# Creating a character vector with the lines to add
+	info_lines <- c(
+	'##INFO=<ID=MAX_SVLEN,Number=0,Type=Flag,Description="Breakpoints not refined because SVLEN exceeds the threshold set">',
+	'##INFO=<ID=NO_ALIGNMENT,Number=0,Type=Flag,Description="Breakpoints not refined because no alignement was produced">',
+	'##INFO=<ID=GATHER_DATA_FAILED,Number=0,Type=Flag,Description="Breakpoints not refined because gathering alignment failed">',
+	'##INFO=<ID=BELOW_THRESHOLDS,Number=0,Type=Flag,Description="Breakpoints not refined because quality thresholds not met">',
+	'##INFO=<ID=REALIGNED,Number=0,Type=Flag,Description="Breakpoints refined by the refine_breakpoints() R function">',
+	'##INFO=<ID=ORIGINAL_START,Number=1,Type=Integer,Description="Start position of variant before breakpoints were refined">',
+	'##INFO=<ID=ORIGINAL_LEN,Number=1,Type=Integer,Description="Length of variant before breakpoints were refined">',
+	'##INFO=<ID=ORIGINAL_ALT,Number=1,Type=String,Description="ALT allele of the variant before breakpoints were refined">',
+	'##INFO=<ID=CONTIG_LEN,Number=1,Type=Integer,Description="Length of the contig used for breakpoint refinement">',
+	'##INFO=<ID=IDENTITY,Number=1,Type=Integer,Description="Percent identity of the alignment used to refine the breakpoints">',
+	'##INFO=<ID=GAPS,Number=1,Type=Integer,Description="Percentage of gaps in the alignment used to refine the breakpoints">',
+	'##INFO=<ID=OVERLAP,Number=1,Type=Float,Description="Reciprocal overlap between original and breakpoint-refined variant">',
+	'##INFO=<ID=DISTANCE_RATIO,Number=1,Type=Float,Description="Edit distance ratio between original and refined allele">',
+	'##INFO=<ID=OFFSET,Number=1,Type=Integer,Description="Absolute difference (bp) between original allele and refined allele">'
+	)
+
+	# Updating the vcf_lines with those metainfo lines
+	header_lines <- c(header_lines[1:last_info], info_lines, header_lines[(last_info + 1):length(header_lines)])
 
 	# We also write the header to the output file
 	output_file <- file(output_vcf, open = "w")

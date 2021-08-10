@@ -60,3 +60,12 @@ Its arguments are documented below.
 
 # Testing the installation
 
+Sourcing the file `breakpoint_refinement.R` in R gives access to the `refine_breakpoints` function and other functions it needs.
+
+	source("breakpoint_refinement.R")
+
+The following command can be run in R to test the installation on test data, provided that the programs listed above are in your `$PATH`:
+
+	refine_breakpoints("input_test.vcf", "output_test.vcf", "test.bam", "refgenome.fa", ncores = 4)
+
+
