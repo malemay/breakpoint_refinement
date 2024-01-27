@@ -92,5 +92,7 @@ The output of the pipeline will be written to output_test.vcf.
 
 ## Citation
 
-If you use this pipeline, please cite:
-
+Lemay, MA., Sibbesen, J.A., Torkamaneh, D. et al. Combined use of Oxford
+Nanopore and Illumina sequencing yields insights into soybean structural
+variation biology. BMC Biol 20, 53 (2022).
+<https://doi.org/10.1186/s12915-022-01255-w>
